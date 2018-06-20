@@ -9,42 +9,26 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-@RequestMapping("/usuarios")
-public class UsuarioController {
+@RequestMapping("/disciplinas")
+public class DisciplinaController {
 
-//	@Autowired
-//	private CrudUsuarioService cadastroUsuarioService;
-//	
-//	@Autowired
-//	private CrudGrupoService cadastroGrupoService;
-//	
-//	@Autowired
-//	private Usuarios usuarios;
-//	
 	/**
 	 * Esse método é responsável por adicionar os parâmetros que vão ser exibidos na view renderizada ao acessar a rota usuarios/novo	
 	 * @param usuario, que é o objeto a ser acessado
 	 * @return mv, que é um objeto ModelAndView que contém os parâmetros que foram adicionados para exibir na view.
 	 */
 	@RequestMapping("/novo")
-	public ModelAndView novo( ) {
-		ModelAndView mv = new ModelAndView("usuario/CadastroUsuario");
-		mv.addObject("grupos",new String[] {"Admin","Professor","Aluno"});
-		
+	public ModelAndView novo( ) { 
+		ModelAndView mv = new ModelAndView("disciplina/CadastroDisciplina");		
 		return mv;
 		
 	}
 
-//	@RequestMapping("/pesquisar")
-//	public ModelAndView pesquisar(String busca) {
-//		ModelAndView mv = new ModelAndView("usuario/PesquisaUsuario");
-//		if(busca!=null){
-//			mv.addObject("listaUsuarios",cadastroUsuarioService.buscarPorNome(busca));
-//		}else{
-//			mv.addObject("listaUsuarios",usuarios.findAll());
-//		}
-//		return mv;
-//	}
+	@RequestMapping("/busca")
+	public ModelAndView pesquisar( ) {
+		ModelAndView mv = new ModelAndView("disciplina/BuscaDisciplina");
+		return mv;
+	}
 //	
 //	@RequestMapping("/editar")
 //	ModelAndView editar(String id) {

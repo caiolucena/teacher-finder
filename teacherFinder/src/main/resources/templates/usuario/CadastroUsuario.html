@@ -123,11 +123,19 @@
 							<label class="control-label">Grupos*</label>
 							<div>
 
-								<th:block th:each="grupo: ${grupos}">
+								<th:block>
 									<div class="checkbox  checkbox-inline">
-										<input type="checkbox" 
-											
-								/>
+										<input type="checkbox"/> Admin
+									</div>
+								</th:block>
+								<th:block>
+									<div class="checkbox  checkbox-inline">
+										<input type="checkbox"/> Professor
+									</div>
+								</th:block>
+								<th:block>
+									<div class="checkbox  checkbox-inline">
+										<input type="checkbox"/> Aluno
 									</div>
 								</th:block>
 							</div>
