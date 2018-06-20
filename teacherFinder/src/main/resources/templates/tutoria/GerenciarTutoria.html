@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/LayoutPadrao'">
+
+<head>
+<title>Gerenciar Tutorias</title>
+</head>
+<body>
+	<section>
+		<!-- Right Panel -->
+
+		<div id="right-panel" class="rig-panel" layout:fragment="conteudo">
+
+			<!-- Header-->
+			<header id="header" class="header">
+
+				<div class="header-menu">
+
+					<div class="col-sm-7">
+						<a id="menuToggle" class="menutoggle pull-left"><i
+							class="fa fa fa-tasks"></i></a>
+						<div class="header-left">
+							<div>
+							</div>
+
+							<div></div>
+						</div>
+					</div>
+
+					<div class="col-sm-5">
+
+					</div>
+				</div>
+
+			</header>
+			<!-- /header -->
+			<!-- Header-->
+
+			<!-- até aqui tem q ter em todos -->
+			<div class="breadcrumbs">
+				<div class="col-sm-4">
+					<div class="page-header float-left">
+						<div class="page-title">
+							<h1>Gerenciar Tutorias</h1>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+
+				<div class="row">
+						<div class="form-group col-sm-7">
+							<input id="nome" type="text"class="form-control"/>
+							<button type="submit" class="btn  btn-primary"> Buscar</button>
+
+				</div>
+			</div>
+
+				<div class="container-fluid">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<!--<<th><input name="tudo" type="checkbox"></th>-->
+									<th>Disciplina</th>
+									<th>Valor</th>						
+									<th>Avaliação</th>
+									<th colspan="2">Ações</td>
+								</tr>
+							</thead>
+							<tr>
+								<td colspan="4"></td>
+								<td><button type="button" class="btn btn-danger"> Remover</button></td></tr>
+						</table>
+					</div>
+		</div>
+
+	</section>
+	<th:block layout:fragment="javascript-extra">
+		<!-- <script th:src="@{/javascripts/usuario.remover.js}"></script> -->
+	</th:block>
+
+</body>
+
+</html>

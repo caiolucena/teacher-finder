@@ -9,8 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-@RequestMapping("/disciplinas")
-public class DisciplinaController {
+@RequestMapping("/tutorias")
+public class TutoriaController {
 
 	/**
 	 * Esse método é responsável por adicionar os parâmetros que vão ser exibidos na view renderizada ao acessar a rota usuarios/novo	
@@ -19,23 +19,26 @@ public class DisciplinaController {
 	 */
 	@RequestMapping("/novo")
 	public ModelAndView novo( ) { 
-		ModelAndView mv = new ModelAndView("disciplina/CadastroDisciplina");		
+		ModelAndView mv = new ModelAndView("tutoria/CadastroTutoria");		
 		return mv;
 		
 	}
 
 	@RequestMapping("/busca")
 	public ModelAndView pesquisar( ) {
-		ModelAndView mv = new ModelAndView("disciplina/BuscaDisciplina");
+		ModelAndView mv = new ModelAndView("tutoria/GerenciarTutoria");
 		return mv;
 	}
-	
-	@RequestMapping("/editar")
-	ModelAndView editar(String id) {
-		ModelAndView mv = new ModelAndView("disciplina/EditarDisciplina");
-		return mv;
-	}
-	
+//	
+//	@RequestMapping("/editar")
+//	ModelAndView editar(String id) {
+//		ModelAndView mv = new ModelAndView("usuario/CadastroUsuario");
+//		mv.addObject("usuario", usuarios.findOne(Integer.parseInt(id)));
+//		mv.addObject("grupos",cadastroGrupoService.buscaGrupos());
+//		mv.addObject("listaUsuarios",usuarios.findAll());
+//		return mv;
+//	}
+//	
 //	/**
 //	 * Esse é o método que irá acessar a rota usuarios/novo, porém com uma requisição do tipo POST, que servirá para salvar o objeto passado por parâmetro no banco
 //	 * @param usuario, que é o objeto que será mapeado no formulário para salvar informações no banco de dados.
