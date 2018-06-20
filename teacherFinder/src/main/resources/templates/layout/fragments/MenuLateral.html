@@ -21,7 +21,7 @@
 
 			<div id="main-menu" class="main-menu collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html"> <i
+					<li class="active"><a th:href="@{/index}"> <i
 							class="menu-icon fa fa-dashboard"></i>Página Inicial
 					</a></li>
 					<h3 class="menu-title">Cadastros</h3>
@@ -29,95 +29,83 @@
 					<li class="menu-item-has-children dropdown"><a href="#"
 						class="dropdown-toggle" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-building"></i>Meu Estabelecimento
+							class="menu-icon fa fa-building"></i>Meu Cadastro
 					</a>
 						<ul class="sub-menu children dropdown-menu">
 							<li><i class="fa fa-file-text-o"></i><a
-								href="ui-buttons.html">Visualizar Cadastro</a></li>
+								th:href="@{/usuarios/novo}">Visualizar Cadastro</a></li>
 							<li><i class="fa fa-pencil-square-o"></i><a
-								href="ui-buttons.html">Editar Cadastro</a></li>
+								th:href="@{/usuarios/novo}">Editar Cadastro</a></li>
+						</ul></li>
+					<li class="menu-item-has-children dropdown"><a href="#"
+						class="dropdown-toggle " data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"> <i
+							class="menu-icon fa fa-product-hunt"></i>Disciplinas
+					</a>
+						<ul class="sub-menu children dropdown-menu">
+							<li><i class="menu-icon fa fa-plus"></i><a
+								th:href="@{/disciplinas/novo}">Nova Disciplina</a></li>
+							<li><i class="menu-icon fa fa-search"></i><a
+								href="forms-advanced.html">Buscar Disciplinas</a></li>
+							<li><i class="menu-icon fa fa-pencil-square-o"></i><a
+								th:href="@{/disciplinas/editar}">Editar Disciplinas</a></li>
 						</ul></li>
 					<li class="menu-item-has-children dropdown"><a href="#"
 						class="dropdown-toggle" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-table"></i>Usuários
+							class="menu-icon fa fa-address-card-o"></i>Tutoria
 					</a>
 						<ul class="sub-menu children dropdown-menu">
-							<li><i class="fa fa-table"></i><a href="tables-basic.html">Cadastrar
-									Funcionário</a></li>
-							<li><i class="fa fa-table"></i><a href="tables-data.html">Buscar
-									Funcionários </a></li>
-							<li><i class="fa fa-table"></i><a href="tables-data.html">Editar
-									Funcionários </a></li>
-									
+							<li><i class="menu-icon  fa fa-search"></i><a
+								th:href="@{/tutorias/novo}">Tornar-se Tutor</a></li>
+							<li><i class="menu-icon  fa fa-pencil-square-o"></i><a
+								th:href="@{/tutorias/buscar}">Visualizar Tutoria</a></li>
 						</ul></li>
-					<li class="menu-item-has-children dropdown"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-th"></i>Forms
-					</a>
-						<ul class="sub-menu children dropdown-menu">
-							<li><i class="menu-icon fa fa-th"></i><a
-								href="forms-basic.html">Basic Form</a></li>
-							<li><i class="menu-icon fa fa-th"></i><a
-								href="forms-advanced.html">Advanced Form</a></li>
-						</ul></li>
+					
 
-					<h3 class="menu-title">Icons</h3>
-					<!-- /.menu-title -->
-
-					<li class="menu-item-has-children dropdown"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-tasks"></i>Icons
-					</a>
-						<ul class="sub-menu children dropdown-menu">
-							<li><i class="menu-icon fa fa-fort-awesome"></i><a
-								href="font-fontawesome.html">Font Awesome</a></li>
-							<li><i class="menu-icon ti-themify-logo"></i><a
-								href="font-themify.html">Themefy Icons</a></li>
-						</ul></li>
-					<li><a href="widgets.html"> <i class="menu-icon ti-email"></i>Widgets
-					</a></li>
-					<li class="menu-item-has-children dropdown"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-bar-chart"></i>Charts
-					</a>
-						<ul class="sub-menu children dropdown-menu">
-							<li><i class="menu-icon fa fa-line-chart"></i><a
-								href="charts-chartjs.html">Chart JS</a></li>
-							<li><i class="menu-icon fa fa-area-chart"></i><a
-								href="charts-flot.html">Flot Chart</a></li>
-							<li><i class="menu-icon fa fa-pie-chart"></i><a
-								href="charts-peity.html">Peity Chart</a></li>
-						</ul></li>
-
-					<li class="menu-item-has-children dropdown"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-area-chart"></i>Maps
-					</a>
-						<ul class="sub-menu children dropdown-menu">
-							<li><i class="menu-icon fa fa-map-o"></i><a
-								href="maps-gmap.html">Google Maps</a></li>
-							<li><i class="menu-icon fa fa-street-view"></i><a
-								href="maps-vector.html">Vector Maps</a></li>
-						</ul></li>
-					<h3 class="menu-title">Extras</h3>
+					<h3 class="menu-title">Financeiro</h3>
 					<!-- /.menu-title -->
 					<li class="menu-item-has-children dropdown"><a href="#"
 						class="dropdown-toggle" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"> <i
-							class="menu-icon fa fa-glass"></i>Pages
+							class="menu-icon fa fa-usd"></i>Ganhos
 					</a>
 						<ul class="sub-menu children dropdown-menu">
-							<li><i class="menu-icon fa fa-sign-in"></i><a
-								href="page-login.html">Login</a></li>
-							<li><i class="menu-icon fa fa-sign-in"></i><a
-								href="page-register.html">Register</a></li>
-							<li><i class="menu-icon fa fa-paper-plane"></i><a
-								href="pages-forget.html">Forget Pass</a></li>
+							<li><i class="menu-icon  fa fa-money"></i><a
+								th:href="@{/ganhos/buscar}">Verificar ganhos</a></li>
+							<li><i class="menu-icon  fa fa-repeat"></i><a
+								th:href="@{/gastos/buscar}">Verificar gastos</a></li>
+							<li><i class="menu-icon  fa fa-ban"></i><a
+								th:href="@{/balancos/buscar}">Verificar balanço</a></li>
+						</ul></li>
+
+					<li class="menu-item-has-children dropdown"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"> <i
+							class="menu-icon fa fa-file-text-o"></i>Relatórios
+					</a>
+						<ul class="sub-menu children dropdown-menu">
+							<li><i class="menu-icon  fa fa-shopping-bag"></i><a
+								th:href="@{/relatorios/tutoria/buscar}">Relatório de tutoria</a></li>
+								<li><i class="menu-icon  fa fa-shopping-bag"></i><a
+								th:href="@{/relatorios/disciplina/buscar}">Relatório de disciplinas</a></li>
+						</ul></li>
+
+
+					<h3 class="menu-title">Utilitários</h3>
+					<!-- /.menu-title -->
+					<li class="menu-item-has-children dropdown"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"> <i
+							class="menu-icon fa fa-info-circle"></i>Ajuda
+					</a>
+						<ul class="sub-menu children dropdown-menu">
+							<li><i class="menu-icon fa fa-question-circle"></i><a
+								href="page-login.html">Help</a></li>
+							<li><i class="menu-icon fa fa-exclamation-circle"></i><a
+								href="page-register.html">Erros Comuns</a></li>
+							<li><i class="menu-icon fa fa-book"></i><a
+								href="pages-forget.html">Manual</a></li>
 						</ul></li>
 				</ul>
 			</div>
